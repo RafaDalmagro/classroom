@@ -1,5 +1,5 @@
 import "./global.css";
-import { use, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Button } from "./components/button";
 // import { useMessage } from "./hooks/useMessage";
@@ -9,6 +9,10 @@ import styles from "./app.module.css";
 export function App() {
     // const { show } = useMessage({ name: "Rafael", age: 26 });
     const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log("Count mudouu:", count);
+    }, [count]);
 
     return (
         <div className={styles.container}>
